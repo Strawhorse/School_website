@@ -18,5 +18,6 @@ This is a personal project to try to consolidate a number of techniques I have l
 
 **Languages**
 - Initially I intend to build the front end without any frameworks using just HTML and CSS and JS for functionality
-- Backend will mainly be PHP for database interaction; Laravel to create chat functionality
-- Node.js will be used to make API calls for the main page
+- Backend will mainly be PHP for database interaction; Laravel to create chat functionality (later)
+- Node.js will be used to make API calls for the main page/alternatively JS APIs will be used for promises/fetch requests
+- Running on XAMPP server with PHPAdmin and MySQL
