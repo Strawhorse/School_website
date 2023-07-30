@@ -1,0 +1,13 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.header{
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(14,113,68,0.7),rgba(148,164,157,0.7)), url(Images/generic-school.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
