@@ -7,13 +7,15 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,200;0,400;1,600;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css" integrity="sha384-QYIZto+st3yW+o8+5OHfT6S482Zsvz2WfOzpFSXMF9zqeLcFV0/wlZpMtyFcZALm" crossorigin="anonymous">
 </head>
 <body>
 
     <section class="header">
         <nav>
             <a href="index.html"><img src="Images/logo.jpg" alt=""></a>
-            <div class="nav-links">
+            <div class="nav-links" id="navLinks">
+                <i class="fa-solid fa-rectangle-xmark" onclick="hideMenu()"></i>
                 <ul>
                     <li><a href="">HOME</a></li>
                     <li><a href="">ABOUT US</a></li>
@@ -21,11 +23,19 @@
                     <li><a href="">CURRICULUM</a></li>
                 </ul>
             </div>
+            <i class="fa-solid fa-bars" onclick="showMenu()"></i>
         </nav>
+
+        <div class="text-box">
+            <h1>Ireland's Best Centre For Learning</h1>
+            <p>Join Ireland's Growing Academy For Brilliant Young Minds <br>Work To Make Our Next Generation The Best Ever</p>
+            <a href="" class="hero-btn">Join us now!</a>
+        </div>
 
     </section>
 
 
-    
+    <!-- add JS file -->
+    <script src="script.js"></script>
 </body>
 </html>
