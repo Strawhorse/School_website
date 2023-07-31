@@ -48,7 +48,7 @@ nav img{
     content: '';
     width: 0%;
     height: 2px;
-    background: #374362;
+    background: #e2372a;
     display: block;
     margin: auto;
     transform: 0.5s;
@@ -134,4 +134,52 @@ nav .fa-solid{
     .nav-links ul{
         padding: 30px;
     }
+}
+
+
+/* courses */
+.course{
+    width: 80%;
+    margin:auto;
+    text-align: center;
+    padding-top: 100px;
+}
+h1{
+    font-size: 36px;
+    font-weight: 600;
+}
+p{
+    color: #777;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 10px;
+}
+
+/* lesson materials */
+.row{
+    margin: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* columns */
+.course-col{
+    flex-basis: 31%;
+    background: #fff3f3;
+    border-radius: 10px;
+    margin-bottom: 20px 12px;
+    box-sizing: border-box;
+    transition: 0.5s;
+}
+
+h3{
+    text-align: center;
+    font-weight: 600px;
+    margin: 10px 0;
+
+}
+
+.course-col:hover{
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2);
 }
