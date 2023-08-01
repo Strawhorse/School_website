@@ -2,6 +2,8 @@
 Create a school website with a number of different functionalities
 
 This is a personal project to try to consolidate a number of techniques I have learned as well as expand upon my range of skills.
+Base idea taken from Great Stack Youtube channel for ideas and adapted: https://www.youtube.com/playlist?list=PLjwm_8O3suyP5kGKmwS_DM0Hs1j7fshi5
+Additional functionality my own
 
 **Core functionality**
 - School splash page
