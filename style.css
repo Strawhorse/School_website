@@ -293,4 +293,23 @@ h3{
     border: 1px solid #e2372a;
     background: #9a6c69;
     transition: 1s;
-  }
+}
+
+
+/* contact us form and button */
+.contact-us{
+    margin: 100px auto;
+    width: 30%;
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(Images/banner.jpg);
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    text-align: center;
+    padding: 100px;
+}
+
+.contact-us h1{
+    color: whitesmoke;
+    margin-bottom: 40px;
+    padding: 0%;
+}
