@@ -357,3 +357,32 @@ h3{
     margin-top: 100px;
     
 }
+
+
+/* about us section on About Us page */
+.about-us{
+    width: 80%;
+    margin: auto;
+    padding-top: 80px;
+    padding-bottom: 50px;
+}
+
+.about-col {
+    flex-basis: 48%;
+    padding: 30px 2px;
+}
+
+.about-col img{
+    width: 100%;
+}
+
+.about-col h1{
+    color: black;
+    padding-top: 0;
+}
+
+.about-col p{
+    padding: 15px 0 25px;
+    text-align: left;
+
+}
