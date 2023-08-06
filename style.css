@@ -420,19 +420,11 @@ h3{
     padding: 60px 0;
 }
 
-.blog-content h2{
-    display: block;
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-    padding-bottom: 25px;
-}
 
-
-
+/* comment box */
 .comment-box{
     display: block;
-    width: 50%;
+    width: 40%;
     margin-left: auto;
     margin-right: auto;
     border: 1px solid #ccc;
@@ -451,7 +443,7 @@ h3{
     box-sizing: border-box;
     border: none;
     outline: none;
-    background: #f0f0f0;
+    background: #ede6e6;
 }
 
 
