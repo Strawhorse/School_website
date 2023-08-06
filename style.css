@@ -408,3 +408,61 @@ h3{
     text-align: center;
     color: #fff;
 }
+
+
+
+/* contact page image section */
+.blog-content img{
+    display: block;
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 60px 0;
+}
+
+.blog-content h2{
+    display: block;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 25px;
+}
+
+
+
+.comment-box{
+    display: block;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid #ccc;
+    padding: 10px 20px;
+}
+
+.comment-box h3{
+    text-align: center;
+}
+
+
+.comment-form input, .comment-form textarea{
+    width: 100%;
+    padding: 10px;
+    margin: 15px 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    background: #f0f0f0;
+}
+
+
+.comment-form button{
+    margin: 10px 0;
+}
+
+
+
+@media(max-width: 700) {
+    .sub-header h1{
+        font-size: 24px;
+    }
+}
