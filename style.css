@@ -431,6 +431,15 @@ h3{
     padding: 10px 20px;
 }
 
+.comment-box select{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background: #ede6e6;
+    text-align: left;
+    margin: 15px 0;
+}
+
 .comment-box h3{
     text-align: center;
 }
