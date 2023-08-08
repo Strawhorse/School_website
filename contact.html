@@ -41,11 +41,11 @@
         <div class="comment-box">
             <h3>Leave A Comment</h3>
             <form action="contact_form.php" class="comment-form">
-                <input type="text" placeholder="Enter Name" required>
-                <input type="email" placeholder="Email Address" required>
-                <input type="number" placeholder="Telephone Number" required>
+                <input type="text" name="person_name" placeholder="Enter Name" required>
+                <input type="email" name="email" placeholder="Email Address" required>
+                <input type="number" name="telephone" placeholder="Telephone Number" required>
                 
-                <select name="topic" id="topic">
+                <select name="query" id="topic">
                     <option value="" disabled selected>Select your query</option>
                     <option value="general">General query</option>
                     <option value="enrol">Enrolment</option>
@@ -54,7 +54,7 @@
                     <option value="facilities">Use of facilities</option>
                     <option value="tandc">Terms and conditions</option>
                 </select>
-                <textarea name="" id="" cols="30" rows="5" placeholder="Leave Your Message Here" required></textarea>
+                <textarea name="contact_message" id="" cols="30" rows="5" placeholder="Leave Your Message Here" required></textarea>
                 <button type="submit" class="hero-btn red-btn">POST COMMENT</button>
 
 
