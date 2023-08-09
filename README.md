@@ -27,3 +27,12 @@ Additional functionality my own
 **Learning outcomes**
 - Using Udemy courses on PHP and Laravel to boost back end knowledge
 - Create a functional website with a back end, database, and API integration
+
+
+Stages of completion:
+1. Index home page - done
+2. About us page - done
+3. Contact page with form - done
+4. MySQL database created - done
+5. PHP file to read contact requests into database - done
+6. 
