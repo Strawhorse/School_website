@@ -8,7 +8,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
 
     require 'includes/database.php';
 
-    $sql_query = "INSERT INTO queries (person_name, email, telephone, query, contact_message) VALUES (?,?,?,?,?)";
+    $sql_query = "INSERT INTO queries (person_name, email, query, contact_message) VALUES (?,?,?,?)";
 
 
 
@@ -22,7 +22,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
     } else {
 
 
-        mysqli_stmt_bind_param($stmt, 'ssiss', $_POST['person_name'], $_POST['email'], $_POST['telephone'], $_POST['query'],$_POST['contact_message']);
+        mysqli_stmt_bind_param($stmt, 'ssss', $_POST['person_name'], $_POST['email'], $_POST['query'],$_POST['contact_message']);
 
         
 
