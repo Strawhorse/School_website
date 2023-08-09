@@ -31,10 +31,15 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
 
             // function picks up the ID from the last insert
             $id = mysqli_insert_id($conn);
+
+            require 'includes/header.php';
+
             echo "<h1>Query created with record number: $id<br>";
             echo "<h2>Booking stored successfully.<br>";
             echo "<h2>Now returning you to the main school page. Please wait ...";
             header("refresh:3;url=index.html");
+
+            require 'includes/footer.php';
 
         } else {
             echo mysqli_stmt_error($stmt);
@@ -44,6 +49,11 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
 }
+
+
+// later I can retrieve these messages from database and action them
+
+
 
 // close connection
 $conn->close();
