@@ -1,12 +1,15 @@
 <?php
 
+require 'includes/database.php';
+
 
 // check to make sure html form action is post
 
 if($_SERVER["REQUEST_METHOD"] == "POST") {
 
-
-    require 'includes/database.php';
+    
+    // call function from database php file
+    $conn = getDB();
 
     $sql_query = "INSERT INTO queries (person_name, email, telephone, query, contact_message) VALUES (?,?,?,?,?)";
 
