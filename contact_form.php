@@ -37,10 +37,21 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
 
             require 'includes/header.php';
 
-            echo "<h1>Query created with record number: $id<br>";
-            echo "<h2>Booking stored successfully.<br>";
-            echo "<h2>Now returning you to the main school page. Please wait ...";
-            header("refresh:4;url=contact.html");
+            echo "<h3>Query created with record number: $id<br>";
+            echo "<h3>Booking stored successfully.<br>";
+            echo "<h3>Now returning you to the main school page. Please wait ...";
+            
+            if(isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] != 'off') {
+                $protocol = 'https';
+            } else{
+                $protocol = 'http';
+            }
+
+            $server_name = $_SERVER['HTTP_HOST'];
+
+            $total_URL = $protocol . "://" . $server_name . "/School_website/contact.html";
+            
+            header("refresh:4;url= $total_URL");
 
             require 'includes/footer.php';
 
