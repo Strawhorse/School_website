@@ -25,7 +25,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
     } else {
 
 
-        mysqli_stmt_bind_param($stmt, 'ssdss', $_POST['person_name'], $_POST['email'], $_POST['telephone'], $_POST['query'],$_POST['contact_message']);
+        mysqli_stmt_bind_param($stmt, 'ssdss', $_POST['person_name'], $_POST['email'], $_POST['telephone'], $_POST['query'], $_POST['contact_message']);
 
         
 
@@ -40,7 +40,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
             echo "<h1>Query created with record number: $id<br>";
             echo "<h2>Booking stored successfully.<br>";
             echo "<h2>Now returning you to the main school page. Please wait ...";
-            header("refresh:3;url=index.html");
+            header("refresh:4;url=contact.html");
 
             require 'includes/footer.php';
 
