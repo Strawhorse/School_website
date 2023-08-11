@@ -415,6 +415,7 @@ h3{
 .blog-content img{
     display: block;
     width: 40%;
+    height: 40%;
     margin-left: auto;
     margin-right: auto;
     padding: 60px 0;
@@ -440,10 +441,15 @@ h3{
     margin: 15px 0;
 }
 
-.comment-box h3{
+.comment-box h1{
     text-align: center;
+    padding-top: 25px;
 }
 
+.comment-box p{
+    text-align: center;
+    padding-top: 10px;
+}
 
 .comment-form input, .comment-form textarea{
     width: 100%;
@@ -478,3 +484,4 @@ h3{
     text-align: center;
     color: #fff;
 }
+

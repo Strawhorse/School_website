@@ -31,30 +31,47 @@
 
         <!-- about us information for the school -->
 
+    <section>
+        <!-- A dropdown to select a value -->
+        <select id="choose-form">
+            <option>Please choose...</option>
+            <option value="form-A">Some form</option>
+            <option value="form-B">Another form</option>
+        </select>
+    </section>
 
 
-    <section class="">
+    <!-- Login and sign up sheets -->
+    <section class="blog-content">
         
+
         <div class="comment-box">
             <h1>Sign Up For School Account</h1>
-            <form action="">
-                <label for="">First Name</label>
+            <form action="contact_form.php" method="post" class="comment-form">
                 <input type="text" placeholder="First Name" required>
-                <label for="">Last Name</label>
+                    
                 <input type="text" placeholder="Last Name" required>
-                <label for="">Email Address</label>
+                
                 <input type="email" placeholder="Email" required>
-                <label for="">Password</label>
-                <input type="password" placeholder="Enter password here ..." required>
-                <label for="">Are you a teacher or student</label>
+               
+                <input type="password" placeholder="Enter password here" required>
+                
+                <input type="password" placeholder="Re-enter password" required>
+
                 <select>
+                    <option value="" disabled selected>Are you a teacher or student</option>
                     <option value="teacher">Teacher</option>
                     <option value="student">Student</option>
-                </section>
+                </select>
+                <button type="" class="hero-btn red-btn">Sign Up</button>
+                <p>By clicking on the Submit button you agree to the <a href="">Terms and Conditions</a> and <a href="">Privacy Policy</a> of the school.</p>
+
+
+                <!-- add in JS verification/bot check here -->
+
             </form>
-
         </div>
-
+       
     </section>
 
 
