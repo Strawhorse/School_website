@@ -17,6 +17,3 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 }
 
-
-// alternatively to destroy a session
-
