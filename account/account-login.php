@@ -1,9 +1,7 @@
 <?php
 
-setcookie('example', '', time() -3600);
-// to delete cookie, set time in the past
+session_start();
 
+$_SESSION['is_logged_in'] = true;
 
-var_dump($_COOKIE);
-
-echo 'Cookie deleted';
+var_dump($_SESSION);
