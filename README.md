@@ -35,4 +35,16 @@ Stages of completion:
 3. Contact page with form - done
 4. MySQL database created - done
 5. PHP file to read contact requests into database - done
-6. Using sessions - 
+6. Using sessions - begin researching -
+7. 
+
+
+Other web sources used: 
+Udemy
+https://technosmarter.com/php/PHP-Login-session-start-destroyed.html
+https://www.simplilearn.com/tutorials/php-tutorial/php-login-form
+https://phppot.com/php/php-login-script-with-session/
+https://alexwebdevelop.com/user-authentication/
+https://www.tutorialspoint.com/php/php_login_example.htm
+https://www.php.net/manual/en/features.http-auth.php
+https://atakde.medium.com/how-to-secure-php-sessions-f615a9760d7f
