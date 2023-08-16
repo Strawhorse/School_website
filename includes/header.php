@@ -7,7 +7,7 @@
 <body>
 
     <header>
-        <h1>Booking now confirmed...</h1>
+
     </header>
 
     <main>
