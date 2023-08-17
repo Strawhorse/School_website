@@ -1,9 +1,12 @@
 <?php
 
-// include '../includes/header.php';
-// include '../includes/footer.php';
 
+// start session
 session_start();
+
+
+$_SESSION['is_logged_in'] = true;
+
 
 $username = $_POST["email"];
 

@@ -2,6 +2,9 @@
 
 session_start();
 
+$_SESSION['is_logged_in'] = false;
+// this is not needed as it will be destroyed below
+
 session_destroy();
 
 
