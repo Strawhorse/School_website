@@ -5,9 +5,6 @@
 session_start();
 
 
-$_SESSION['is_logged_in'] = true;
-
-
 $username = $_POST["email"];
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
