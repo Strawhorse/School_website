@@ -35,8 +35,8 @@ Stages of completion:
 3. Contact page with form - done
 4. MySQL database created - done
 5. PHP file to read contact requests into database - done
-6. Using sessions - begin researching -
-7. 
+6. Using sessions - done (sessions and cookies)
+7. Changing query database reading from mysqli to PDO - working...
 
 
 Other web sources used: 
