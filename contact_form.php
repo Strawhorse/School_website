@@ -13,15 +13,10 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $conn = $db->getConn();
 
-
-    $sql_query = "INSERT INTO queries (person_name, email, telephone, query, contact_message) VALUES (?,?,?,?,?)";
-
+    $prep_statement = $conn->prepare("INSERT INTO queries (person_name, email, telephone, query, contact_message) VALUES (:person_name, :email, :telephone, :query, :contact_message)");
 
 
-    // create a prepared statement instead
-    $stmt = $conn->prepare($sql_query);
-
-    if ($stmt === false) {
+    if ($prep_statement === false) {
 
         echo $conn->errorInfo();
 
@@ -34,7 +29,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
         $stmt->bindParam(':contact_message', $_POST['contact_message']);
 
         $stmt->execute();
-        
+
       
 
 
