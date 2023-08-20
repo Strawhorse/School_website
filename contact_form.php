@@ -7,13 +7,19 @@ require 'classes/Database.php';
 
 if($_SERVER["REQUEST_METHOD"] == "POST") {
 
+    $person_name = $_POST['person_name'];
+    $email = $_POST['email'];
+    $telephone = $_POST['telephone'];
+    // $query = $_POST['query'];
+    $contact_message = $_POST['contact_message'];
+    
     
     // call function from database php file
     $db = new Database();
 
     $conn = $db->getConn();
 
-    $prep_statement = $conn->prepare("INSERT INTO queries (person_name, email, telephone, query, contact_message) VALUES (:person_name, :email, :telephone, :query, :contact_message)");
+    $prep_statement = "INSERT INTO queries (person_name, email, telephone, contact_message) VALUES (:person_name, :email, :telephone, :contact_message)";
 
 
     if ($prep_statement === false) {
@@ -22,18 +28,20 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
 
     } else {
 
-        $stmt->bindParam(':person_name', $_POST['person_name']);
-        $stmt->bindParam(':email', $_POST['email']);
-        $stmt->bindParam(':telephone', $_POST['telephone']);
-        $stmt->bindParam(':query', $_POST['query']);
-        $stmt->bindParam(':contact_message', $_POST['contact_message']);
+        $query = $conn -> prepare($prep_statement);
 
-        $stmt->execute();
+        $query->bindParam(':person_name', $person_name);
+        $query->bindParam(':email', $email);
+        $query->bindParam(':telephone', $telephone);
+        // $query->bindParam(':query', $query,PDO::PARAM_STR);
+        $query->bindParam(':contact_message', $contact_message);
+
+        $query->execute();
 
       
 
 
-        if($stmt->execute()) {
+        if($query->execute()) {
 
             // function picks up the ID from the last insert
             $id = $conn->lastInsertId();
@@ -73,7 +81,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
 // close connection
-$conn->close();
+$conn = null;
 
 
 ?>
