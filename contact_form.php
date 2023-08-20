@@ -36,11 +36,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
         // $query->bindParam(':query', $query,PDO::PARAM_STR);
         $query->bindParam(':contact_message', $contact_message);
 
-        $query->execute();
-
-      
-
-
+ 
         if($query->execute()) {
 
             // function picks up the ID from the last insert
