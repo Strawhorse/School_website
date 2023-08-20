@@ -1,6 +1,6 @@
 <?php
 
-require 'includes/database.php';
+require 'classes/Database.php';
 
 
 // check to make sure html form action is post
@@ -9,31 +9,39 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
 
     
     // call function from database php file
-    $conn = getDB();
+    $db = new Database();
+
+    $conn = $db->getConn();
+
 
     $sql_query = "INSERT INTO queries (person_name, email, telephone, query, contact_message) VALUES (?,?,?,?,?)";
 
 
 
     // create a prepared statement instead
-    $stmt = mysqli_prepare($conn,$sql_query);
+    $stmt = $conn->prepare($sql_query);
 
     if ($stmt === false) {
 
-        echo mysqli_error($conn);
+        echo $conn->errorInfo();
 
     } else {
 
+        $stmt->bindParam(':person_name', $_POST['person_name']);
+        $stmt->bindParam(':email', $_POST['email']);
+        $stmt->bindParam(':telephone', $_POST['telephone']);
+        $stmt->bindParam(':query', $_POST['query']);
+        $stmt->bindParam(':contact_message', $_POST['contact_message']);
 
-        mysqli_stmt_bind_param($stmt, 'ssdss', $_POST['person_name'], $_POST['email'], $_POST['telephone'], $_POST['query'], $_POST['contact_message']);
-
+        $stmt->execute();
         
+      
 
 
-        if(mysqli_stmt_execute($stmt)) {
+        if($stmt->execute()) {
 
             // function picks up the ID from the last insert
-            $id = mysqli_insert_id($conn);
+            $id = $conn->lastInsertId();
 
             require 'includes/header.php';
 
@@ -56,7 +64,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
             require 'includes/footer.php';
 
         } else {
-            echo mysqli_stmt_error($stmt);
+            echo $conn->errorInfo();
             
         }
 
