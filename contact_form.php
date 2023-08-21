@@ -7,6 +7,8 @@ require 'classes/Database.php';
 
 if($_SERVER["REQUEST_METHOD"] == "POST") {
 
+    session_start();
+
     $person_name = $_POST['person_name'];
     $email = $_POST['email'];
     $telephone = $_POST['telephone'];
