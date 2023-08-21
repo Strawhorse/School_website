@@ -46,6 +46,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
 
             require 'includes/header.php';
 
+            echo "The URI of the page sending this request is" . $_SERVER['REQUEST_URI'];
+
             echo "<h3>Query created with record number: $id<br>";
             echo "<h3>Booking stored successfully.<br>";
             echo "<h3>Now returning you to the main school page. Please wait ...";
@@ -65,6 +67,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
             require 'includes/footer.php';
 
         } else {
+            echo "Something happened, error details below:";
             echo $conn->errorInfo();
             
         }

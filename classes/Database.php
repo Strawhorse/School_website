@@ -23,11 +23,16 @@ class Database {
 
         try{  
             /* PDO object creation */
-            return new PDO($dsn, $db_user, $db_pass);
+            $db = new PDO($dsn, $db_user, $db_pass);
+
+            $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+            return $db;
 
         } catch (PDOException $e) {
             /* If there is an error an exception is thrown */
             echo 'Database connection failed.';
-            die();
+            echo $e->getMessage();
+            exit;
         }
 }}
