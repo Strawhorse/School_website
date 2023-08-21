@@ -21,9 +21,13 @@ class Database {
 
         $dsn = 'mysql:host=' . $db_host . ';dbname=' . $db_name . ';charset=utf8';
 
-        return new PDO($dsn, $db_user, $db_pass);
+        try{  
+            /* PDO object creation */
+            return new PDO($dsn, $db_user, $db_pass);
 
-
-
-    }
-}
+        } catch (PDOException $e) {
+            /* If there is an error an exception is thrown */
+            echo 'Database connection failed.';
+            die();
+        }
+}}
