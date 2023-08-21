@@ -34,6 +34,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         require '../includes/footer.php';
     } else{
         die("Incorrect login!");
+        
 
     }
 }

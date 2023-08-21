@@ -32,11 +32,11 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
 
         $query = $conn -> prepare($prep_statement);
 
-        $query->bindParam(':person_name', $person_name);
-        $query->bindParam(':email', $email);
-        $query->bindParam(':telephone', $telephone);
+        $query->bindParam(':person_name', $person_name, PDO::PARAM_STR);
+        $query->bindParam(':email', $email, PDO::PARAM_STR);
+        $query->bindParam(':telephone', $telephone, PDO::PARAM_INT);
         // $query->bindParam(':query', $query,PDO::PARAM_STR);
-        $query->bindParam(':contact_message', $contact_message);
+        $query->bindParam(':contact_message', $contact_message, PDO::PARAM_STR);
 
  
         if($query->execute()) {
