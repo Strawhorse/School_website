@@ -1,3 +1,9 @@
+<?php
+    require '../classes/Database.php';
+    require '../classes/Query.php';
+?>
+
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -20,20 +26,31 @@
                     <li><a href="." style="color: #c7190d; font-weight: 600;">FIND STUDENT</a></li>
                     <li><a href="." style="color: #c7190d; font-weight: 600;">ENTER STUDENT</a></li>
                     <li><a href="." style="color: #c7190d; font-weight: 600;">GRADES</a></li>
-                    <li><a href="queries.php" style="color: #c7190d; font-weight: 600;">CHECK QUERIES</a></li>
+                    <li><a href="." style="color: #c7190d; font-weight: 600;">CHECK QUERIES</a></li>
                     <li><a href="." style="color: #c7190d; font-weight: 600;">EMAIL</a></li>
                     <li><a href="account-logout.php" style="color: #c7190d; font-weight: 600;">LOG OUT</a></li>
                 </ul>
             </div>
             <i class="fa-solid fa-bars" onclick="showMenu()"></i>
         </nav>        
-        <h1>Teacher Access</h1>
+        <h1>School Queries</h1>
     </section>
 
 
     <!-- Login and sign up sheets -->
     <section>
+
+    <!-- display all the queries in the database -->
         
+    <?php
+
+        $db = new Database();
+        $conn = $db->getConn();
+        
+        $articles = Query::getAll($conn);
+
+        echo "<center>Can access database successfully<?center>";
+    ?>
 
        
     </section>
