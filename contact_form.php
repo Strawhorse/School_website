@@ -10,7 +10,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
     session_start();
 
     $person_name = $_POST['person_name'];
-    $email = $_POST['email'];
+    $email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
     $telephone = $_POST['telephone'];
     // $query = $_POST['query'];
     $contact_message = $_POST['contact_message'];
@@ -61,8 +61,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
         require 'includes/footer.php';
 
     } else {
-        echo "Something happened, error details below:";
+        echo "<h3>Something happened, error details below:<br>";
         echo $conn->errorInfo();
+        error_log($conn->errorCode(),3,'/errors/error.log');
         
     }
 
