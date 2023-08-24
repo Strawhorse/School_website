@@ -1,6 +1,7 @@
 <?php
     require '../classes/Database.php';
     require '../classes/Query.php';
+
 ?>
 
 
@@ -49,6 +50,11 @@
         $articles = Query::getAll($conn);
 
         echo "<center> Database connection okay...";
+
+
+
+
+    
         
     ?>
 
