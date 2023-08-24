@@ -41,15 +41,17 @@
     <section>
 
     <!-- display all the queries in the database -->
-        
     <?php
 
         $db = new Database();
         $conn = $db->getConn();
         
-        // $articles = Query::getAll($conn);
+        $articles = Query::getAll($conn);
+
+        echo "<center> Database connection okay...";
         
     ?>
+
 
        
     </section>
