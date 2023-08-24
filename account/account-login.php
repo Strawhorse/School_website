@@ -5,7 +5,7 @@
 session_start();
 
 
-$username = $_POST["email"];
+// $username = $_POST["email"];
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if($_POST['email'] == 'management@gmail.com' && $_POST['password'] == 'aaa') {
@@ -17,7 +17,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         require '../includes/header.php';
         
-        echo "<h1>Login correct, $username <br> Welcome back, redirecting ...<?h1>";
+        echo "<h1>Login correct, <br> Welcome back, redirecting ...<?h1>";
         header("refresh:3;url=account.html");
         require '../includes/footer.php';
 

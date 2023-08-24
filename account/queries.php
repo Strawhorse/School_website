@@ -47,9 +47,8 @@
         $db = new Database();
         $conn = $db->getConn();
         
-        $articles = Query::getAll($conn);
-
-        echo "<center>Can access database successfully<?center>";
+        // $articles = Query::getAll($conn);
+        
     ?>
 
        
