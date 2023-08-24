@@ -37,8 +37,9 @@ Stages of completion:
 5. PHP file to read contact requests into database - done
 6. Using sessions - done (sessions and cookies)
 7. Changing query database writing from mysqli to PDO - done for query posting
-8. Creating account login using database -
-9. Password hashing - 
+8. Return list of items in database as a table on the teacher account - 
+9. Creating account login using database -
+10. Password hashing - 
 
 
 Other web sources used: 
