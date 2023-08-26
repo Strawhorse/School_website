@@ -6,9 +6,12 @@
 require 'classes/Database.php';
 
 
+
 // check to make sure html form action is post
 
 if($_SERVER["REQUEST_METHOD"] == "POST") {
+
+    
 
     session_start();
 
