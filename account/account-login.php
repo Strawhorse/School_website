@@ -10,7 +10,7 @@ session_start();
 // $username = $_POST["email"];
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    if(User::authenticate($_POST['email'] $_POST['password'])) {
+    if(User::authenticate($_POST['email', $_POST['password'])) {
         
         // regenerate session after logging in
         session_regenerate_id(true);
