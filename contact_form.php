@@ -1,5 +1,8 @@
 <?php
 
+
+
+// issue with pathing between Linux and Windows, need to find a resolution
 require 'classes/Database.php';
 
 
