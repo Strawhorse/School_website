@@ -16,6 +16,7 @@ class User {
         
         $sql = "SELECT * FROM user WHERE email = :email";
         
+        
         $stmt = $conn->prepare($sql);
         $stmt->bindValue(':email', $email, PDO::PARAM_STR);
 
@@ -27,7 +28,7 @@ class User {
 
         
         if($user = $stmt->fetch()) {
-            return $user->password == $password;
+            return password_verify($password,$user->password);
         }
         
     }
