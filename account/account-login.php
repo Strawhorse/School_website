@@ -1,7 +1,8 @@
 <?php
 
 // fixed pathing issue
-require(dirname(__FILE__)."/../classes/User.php");
+require_once '../classes/User.php';
+require_once  '../classes/Database.php';
 
 
 // start session
@@ -11,7 +12,13 @@ session_start();
 // $username = $_POST["email"];
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    if(User::authenticate($_POST['email'], $_POST['password'])) {
+
+
+    $db = new Database();
+    $conn = $db->getConn();
+    
+
+    if(User::authenticate($conn, $_POST['email'], $_POST['password'])) {
         
         // regenerate session after logging in
         session_regenerate_id(true);

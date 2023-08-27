@@ -12,17 +12,30 @@ class User {
 
 
     // authenticate user
-    public static function authenticate($email, $password) {
+    public static function authenticate($conn, $email, $password) {
         
         $sql = "SELECT * FROM user WHERE email = :email";
         
-        $db = new Database();
-        $conn = $db->getConn();
-        
         $stmt = $conn->prepare($sql);
         $stmt->bindValue(':email', $email, PDO::PARAM_STR);
+
+        // return an object class
+        $stmt->setFetchMode(PDO::FETCH_CLASS, 'User');
+
+
+        $stmt->execute();
+
+        $user = $stmt->fetch();
+
+        // will return an object of type 'User' if found
+
+        if($user) {
+            
+            if($user->password == $password){
+                return true;
+            }
+
+        }
         
-
-
     }
 }
