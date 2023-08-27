@@ -41,7 +41,21 @@
     <!-- Login and sign up sheets -->
     <section>
 
-    <!-- display all the queries in the database -->
+        <table class="table table-bordered">
+            <thead class="alert-info">
+                <tr>
+                    <th>Query no.</th>
+                    <th>Name</th>
+                    <th>Email Address</th>
+                    <th>Telephone Number</th>
+                    <th>Query</th>
+                </tr>
+            </thead>
+            <tbody style="background-color:#fff;">
+                <!-- <?php include'pdo_table.php'?> -->
+            </tbody>
+        </table>
+
     <?php
 
         $db = new Database();
@@ -50,14 +64,11 @@
         $articles = Query::getAll($conn);
 
         echo "<center> Database connection okay...";
-
-        
-
-
-    
         
     ?>
 
+    <!-- display all the queries in the database - will come in as Query objects so make sure to change parameters in method in Query class -->
+    
 
        
     </section>
