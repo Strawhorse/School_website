@@ -25,16 +25,9 @@ class User {
 
         $stmt->execute();
 
-        $user = $stmt->fetch();
-
-        // will return an object of type 'User' if found
-
-        if($user) {
-            
-            if($user->password == $password){
-                return true;
-            }
-
+        
+        if($user = $stmt->fetch()) {
+            return $user->password == $password;
         }
         
     }
