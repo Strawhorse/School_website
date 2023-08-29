@@ -62,7 +62,6 @@
         <?php
 
             // quick check to make sure user is logged in
-
             if(!Auth::isLoggedIn()) {
                 die('unauthorised access');
             }
@@ -70,6 +69,7 @@
                 echo 'logged in okay';
             }   
 
+            // set database connection to feed queries into table
             $db = new Database();
             $conn = $db->getConn();
             
