@@ -3,6 +3,9 @@
 // fixed pathing issue
 require_once '../classes/User.php';
 require_once  '../classes/Database.php';
+require_once '../classes/Auth.php';
+
+
 
 
 // start session

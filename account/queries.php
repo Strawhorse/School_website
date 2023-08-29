@@ -1,7 +1,10 @@
 <?php
     require '../classes/Database.php';
     require '../classes/Query.php';
+    require_once '../classes/Auth.php';
 
+
+    session_start();
 ?>
 
 
@@ -38,8 +41,8 @@
     </section>
 
 
-    <!-- Login and sign up sheets -->
-    <section>
+    <!-- create table headers for list of queries -->
+    <section style="display: flex; justify-content: center;">
 
         <table class="table table-bordered">
             <thead class="alert-info">
@@ -56,21 +59,26 @@
             </tbody>
         </table>
 
-    <?php
+        <?php
 
-        $db = new Database();
-        $conn = $db->getConn();
-        
-        $articles = Query::getAll($conn);
+            // quick check to make sure user is logged in
 
-        echo "<center> Database connection okay...";
+            if(!Auth::isLoggedIn()) {
+                die('unauthorised access');
+            }
+            else{
+                echo 'logged in okay';
+            }   
+
+            $db = new Database();
+            $conn = $db->getConn();
+            
+            $articles = Query::getAll($conn);
+
         
-    ?>
+        ?>
 
     <!-- display all the queries in the database - will come in as Query objects so make sure to change parameters in method in Query class -->
-    
-
-       
     </section>
 
 
