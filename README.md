@@ -38,7 +38,7 @@ Stages of completion:
 6. Using sessions - done (sessions and cookies)
 7. Changing query database writing from mysqli to PDO - done for query posting
 8. Return list of items in database as a table on the teacher account - 
-9. Creating account login using database -
+9. Creating account login using database - Done
 10. Password hashing - Done
 11. Autoloading classes check - 
 
