@@ -8,7 +8,6 @@
 
     Auth::requireLogin();
 
-
 ?>
 
 
@@ -77,11 +76,21 @@
             // set database connection to feed queries into table
             $db = new Database();
             $conn = $db->getConn();
-            
-            $articles = Query::getAll($conn);
-
         
+            $queries = Query::getAll($conn);
         ?>
+
+        <?php
+            if(empty($queries)) : 
+        ?>
+            <p>No queries found in database.</p>
+
+        <?php else : ?>
+            <?php foreach ($queries as $query) : ?>
+                <p>Hi</p>
+            <?php endforeach ?>
+
+        <?php endif; ?>
 
     <!-- display all the queries in the database - will come in as Query objects so make sure to change parameters in method in Query class -->
     </section>
