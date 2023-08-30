@@ -48,8 +48,8 @@
     <!-- create table headers for list of queries -->
     <section style="display: flex; justify-content: center;">
 
-        <table class="table table-bordered">
-            <thead class="alert-info">
+        <table class="query-list">
+            <thead class="">
                 <tr>
                     <th>Query no.</th>
                     <th>Name</th>
@@ -58,6 +58,15 @@
                     <th>Query</th>
                 </tr>
             </thead>
+            <tbody>
+                <tr>
+                    <td>0</td>
+                    <td>Test</td>
+                    <td>Test</td>
+                    <td>Test</td>
+                    <td>Test</td>
+                </tr>
+            </tbody>
             <tbody style="background-color:#fff;">
                 <!-- <?php include'pdo_table.php'?> -->
             </tbody>

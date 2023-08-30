@@ -485,3 +485,6 @@ h3{
     color: #fff;
 }
 
+.query-list table, th, td{
+    border: 1px solid grey;
+}
