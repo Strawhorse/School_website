@@ -1,6 +1,6 @@
 <?php
 
-require_once '../classes/Auth.php';
+require_once dirname(__DIR__) . '/classes/Auth.php';
 
 session_start();
 

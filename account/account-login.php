@@ -1,9 +1,9 @@
 <?php
 
 // fixed pathing issue
-require_once '../classes/User.php';
-require_once  '../classes/Database.php';
-require_once '../classes/Auth.php';
+require_once dirname(__DIR__) . '/classes/User.php';
+require_once dirname(__DIR__) . '/classes/Database.php';
+require_once dirname(__DIR__) . '/classes/Auth.php';
 
 // start session
 session_start();

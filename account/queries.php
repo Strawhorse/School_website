@@ -1,8 +1,8 @@
 <?php
-    require '../classes/Database.php';
-    require '../classes/Query.php';
-    require_once '../classes/Auth.php';
-    require_once '../classes/Auth.php';
+
+    require_once dirname(__DIR__) . '/classes/Database.php';
+    require_once dirname(__DIR__) . '/classes/Auth.php';
+    require_once dirname(__DIR__) . '/classes/Query.php';
 
     session_start();
 
