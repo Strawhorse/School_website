@@ -57,18 +57,7 @@
                     <th>Query</th>
                 </tr>
             </thead>
-            <tbody>
-                <tr>
-                    <td>0</td>
-                    <td>Test</td>
-                    <td>Test</td>
-                    <td>Test</td>
-                    <td>Test</td>
-                </tr>
-            </tbody>
-            <tbody style="background-color:#fff;">
-                <!-- <?php include'pdo_table.php'?> -->
-            </tbody>
+            
         </table>
 
         <?php
@@ -86,9 +75,23 @@
             <p>No queries found in database.</p>
 
         <?php else : ?>
-            <?php foreach ($queries as $query) : ?>
-                <p>Hi</p>
-            <?php endforeach ?>
+        
+            <table class="query-list">
+                <tbody>
+                    <?php foreach ($queries as $query) : ?> 
+                        <tr>
+                            <td>
+                                <p><?= $query['id']; ?></p>
+                                <p><?= $query['person_name']; ?></p>
+                                <p><?= $query['email']; ?></p>
+                                <p><?= $query['telephone']; ?></p>
+                                <p><?= $query['contact_message']; ?></p>
+                            </td>
+                        </tr>
+                </tbody>
+            </table>
+
+        <?php endforeach ?>
 
         <?php endif; ?>
 
