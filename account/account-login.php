@@ -1,5 +1,9 @@
 <?php
 
+spl_autoload_register(function($class) {
+    require_once "classes/{$class}.php";
+});
+
 // fixed pathing issue
 require_once '../classes/User.php';
 require_once  '../classes/Database.php';
