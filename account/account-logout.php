@@ -5,10 +5,6 @@ session_start();
 $_SESSION['is_logged_in'] = false;
 // this is not needed as it will be destroyed below
 
-session_destroy();
-
-
-// session destroy only destroys the data not the session itself, so you need another step
 
 // Unset all of the session variables.
 $_SESSION = array();
@@ -18,10 +14,16 @@ $_SESSION = array();
 if (ini_get("session.use_cookies")) {
     $params = session_get_cookie_params();
     setcookie(session_name(), '', time() - 42000,
-        $params["path"], $params["domain"],
-        $params["secure"], $params["httponly"]
+        $params["path"], 
+        $params["domain"],
+        $params["secure"], 
+        $params["httponly"]
     );
 }
+
+
+session_destroy();
+// session destroy only destroys the data not the session itself, so you need another step
 
 // $_SESSION['is_logged_in'] = false;
 echo "<h1>Logged out, redirecting ...<?h1>";
