@@ -23,9 +23,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // regenerate session after logging in
         session_regenerate_id(true);
                 
-        $_SESSION['is_logged_in'] = true;
-
-        require '../includes/header.php';
+        Auth::login();
         
         echo "<h1>Login correct, <br> Welcome back, redirecting ...<?h1>";
         header("refresh:3;url=account.html");
