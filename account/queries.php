@@ -47,13 +47,18 @@
     <div>
         <br>
         <table style="border:1px solid black; margin-left:auto; margin-right:auto; width: 500px;">
-            <tr>
-                <th>Query no.</th>
-                <th>Name</th>
-                <th>Email</th>
-                <th>Telephone</th>
-                <th>Details</th>
-            </tr>
+            <thead>
+                <tr>
+                    <th>Query no.</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Telephone</th>
+                    <th>Details</th>
+                </tr>
+            </thead>
+            
+            
+            <tbody>
 
             <?php
 
@@ -70,7 +75,7 @@
                 <p>No queries found in database.</p>
 
             <?php else : ?>
-            
+
 
             <?php foreach ($queries as $query) : ?> 
                 <tr>
@@ -84,9 +89,12 @@
                 </tr>
 
 
-        <?php endforeach ?>
+            <?php endforeach ?>
 
-        <?php endif; ?>
+            <?php endif; ?>
+
+
+            </tbody>
 
         </table>
     </div>
