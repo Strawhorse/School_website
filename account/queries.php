@@ -44,59 +44,52 @@
     </section>
 
 
-    <!-- create table headers for list of queries -->
-    <section style="display: flex; justify-content: center;">
+    <div>
+        <br>
+        <table style="border:1px solid black; margin-left:auto; margin-right:auto; width: 500px;">
+            <tr>
+                <th>Query no.</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Telephone</th>
+                <th>Details</th>
+            </tr>
 
-        <table class="query-list">
-            <thead class="">
-                <tr>
-                    <th>Query no.</th>
-                    <th>Name</th>
-                    <th>Email Address</th>
-                    <th>Telephone Number</th>
-                    <th>Query</th>
-                </tr>
-            </thead>
-            
-        </table>
-
-        <?php
+            <?php
 
             // set database connection to feed queries into table
             $db = new Database();
             $conn = $db->getConn();
-        
+
             $queries = Query::getAll($conn);
-        ?>
+            ?>
 
-        <?php
+            <?php   
             if(empty($queries)) : 
-        ?>
-            <p>No queries found in database.</p>
+            ?>
+                <p>No queries found in database.</p>
 
-        <?php else : ?>
-        
-            <table class="query-list">
-                <tbody>
-                    <?php foreach ($queries as $query) : ?> 
-                        <tr>
-                            <td>
-                                <p><?= $query['id']; ?></p>
-                                <p><?= $query['person_name']; ?></p>
-                                <p><?= $query['email']; ?></p>
-                                <p><?= $query['telephone']; ?></p>
-                                <p><?= $query['contact_message']; ?></p>
-                            </td>
-                        </tr>
-                </tbody>
-            </table>
+            <?php else : ?>
+            
+
+            <?php foreach ($queries as $query) : ?> 
+                <tr>
+                    <td>
+                        <p><?= $query['id']; ?></p>
+                        <p><?= $query['person_name']; ?></p>
+                        <p><?= $query['email']; ?></p>
+                        <p><?= $query['telephone']; ?></p>
+                        <p><?= $query['contact_message']; ?></p>
+                    </td>
+                </tr>
+
 
         <?php endforeach ?>
 
         <?php endif; ?>
 
-    <!-- display all the queries in the database - will come in as Query objects so make sure to change parameters in method in Query class -->
-    </section>
+        </table>
+    </div>
 
 
 
