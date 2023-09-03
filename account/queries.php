@@ -33,7 +33,7 @@
                     <li><a href="." style="color: #c7190d; font-weight: 600;">FIND STUDENT</a></li>
                     <li><a href="." style="color: #c7190d; font-weight: 600;">ENTER STUDENT</a></li>
                     <li><a href="." style="color: #c7190d; font-weight: 600;">GRADES</a></li>
-                    <li><a href="." style="color: #c7190d; font-weight: 600;">CHECK QUERIES</a></li>
+                    <li><a href="queries.php" style="color: #c7190d; font-weight: 600;">CHECK QUERIES</a></li>
                     <li><a href="." style="color: #c7190d; font-weight: 600;">EMAIL</a></li>
                     <li><a href="account-logout.php" style="color: #c7190d; font-weight: 600;">LOG OUT</a></li>
                 </ul>
@@ -46,15 +46,15 @@
 
     <div>
         <br>
-        <table style="border:1px solid black; margin-left:auto; margin-right:auto; width: 500px;">
+        <table style="border:1px solid black; margin-left:auto; margin-right:auto; width: 60%; text-align: center;border-spacing: 0 15px; ">
             <thead>
-                <tr>
                     <th>Query no.</th>
                     <th>Name</th>
                     <th>Email</th>
                     <th>Telephone</th>
                     <th>Details</th>
-                </tr>
+                    <th>Link to Query</th>
+                    <th>Answered</th>
             </thead>
             
             <tbody>
@@ -70,26 +70,29 @@
             if(is_array($fetchData)) {
                 $sn = 1;
                 foreach($fetchData as $data) {
-            } 
+
             ?>
 
+            <tr style="border-bottom: 1px solid #ddd;">
+                <td><?php echo $data['id']??''; ?></td>
+                <td><?php echo $data['person_name']??''; ?></td>
+                <td><?php echo $data['email']??''; ?></td>
+                <td><?php echo $data['telephone']??''; ?></td>
+                <td><?php echo $data['contact_message']??''; ?></td>
+                <td></td>
+                <td>⬜</td>
+            </tr>
+            <?php 
+                $sn++;}} 
+                else{ ?>}
+            <tr>
+                <td colspan="6">
 
-            <?php foreach ($queries as $query) : ?> 
-                <tr>
-                    <td>
-                        <p><?= $query['id']; ?></p>
-                        <p><?= $query['person_name']; ?></p>
-                        <p><?= $query['email']; ?></p>
-                        <p><?= $query['telephone']; ?></p>
-                        <p><?= $query['contact_message']; ?></p>
-                    </td>
-                </tr>
+            <?php echo $fetchData; ?>
+                </td>
+            </tr>
 
-
-            <?php endforeach ?>
-
-            <?php endif; ?>
-
+            <?php }?>
 
             </tbody>
 

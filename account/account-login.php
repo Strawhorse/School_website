@@ -27,11 +27,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         
         echo "<h1>Login correct, <br> Welcome back, redirecting ...<?h1>";
         header("refresh:3;url=account.html");
-        require '../includes/footer.php';
 
     } else{
         die("Incorrect login!");
-        
 
     }
 }
