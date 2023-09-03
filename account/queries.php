@@ -66,7 +66,9 @@
             $db = new Database();
             $conn = $db->getConn();
 
-            $queries = Query::getAll($conn);
+
+            
+
             ?>
 
             <?php   
