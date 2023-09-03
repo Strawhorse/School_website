@@ -41,7 +41,8 @@ Stages of completion:
 9. Creating account login using database - Done
 10. Password hashing - Done
 11. Autoloading classes check - 
-12. Pagination and splitting database results up: 
+12. Pagination and splitting database results up:
+13. Grade adder and deleter: 
 
 
 Other web sources used: 
