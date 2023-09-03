@@ -66,8 +66,8 @@
             $db = new Database();
             $conn = $db->getConn();
 
+            $fetchData = Query::fetch_queries($db);
 
-            
 
             ?>
 
