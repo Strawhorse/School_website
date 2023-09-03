@@ -23,28 +23,4 @@ class Query{
 
     }
 
-
-
-    public static function fetch_queries($db) {
-
-        $query = "SELECT * FROM queries ORDER BY id desc";;
-        $result = $db->query($query);
-
-        if($result== true){ 
-            if ($result->num_rows > 0) {
-                $row= mysqli_fetch_all($result, MYSQLI_ASSOC);
-                $msg= $row;
-            } else {
-                $msg= "No Data Found"; 
-            }
-
-        }else{
-        $msg= mysqli_error($db);
-        }
-
-        return $msg;
-    }
-
-    // function to return a query as an object
-
 }

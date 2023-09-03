@@ -57,26 +57,21 @@
                 </tr>
             </thead>
             
-            
             <tbody>
-
             <?php
-
             // set database connection to feed queries into table
             $db = new Database();
             $conn = $db->getConn();
 
-            $fetchData = Query::fetch_queries($db);
-
-
+            $fetchData = Query::getAll($conn);
             ?>
 
             <?php   
-            if(empty($queries)) : 
+            if(is_array($fetchData)) {
+                $sn = 1;
+                foreach($fetchData as $data) {
+            } 
             ?>
-                <p>No queries found in database.</p>
-
-            <?php else : ?>
 
 
             <?php foreach ($queries as $query) : ?> 
