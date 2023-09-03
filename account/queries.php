@@ -39,14 +39,14 @@
                 </ul>
             </div>
             <i class="fa-solid fa-bars" onclick="showMenu()"></i>
-        </nav>        
+        </nav>          
         <h1>School Queries</h1>
     </section>
 
 
     <div>
         <br>
-        <table style="border:1px solid black; margin-left:auto; margin-right:auto; width: 60%; text-align: center;border-spacing: 0 15px; ">
+        <table style="background: #e6ffff; border:1px solid black; margin-left:auto; margin-right:auto; width: 60%; text-align: center;border-spacing: 0 15px; ">
             <thead>
                     <th>Query no.</th>
                     <th>Name</th>
@@ -64,11 +64,8 @@
             $conn = $db->getConn();
 
             $fetchData = Query::getAll($conn);
-            ?>
 
-            <?php   
             if(is_array($fetchData)) {
-                $sn = 1;
                 foreach($fetchData as $data) {
 
             ?>
@@ -82,8 +79,7 @@
                 <td></td>
                 <td>⬜</td>
             </tr>
-            <?php 
-                $sn++;}} 
+            <?php }} 
                 else{ ?>}
             <tr>
                 <td colspan="6">
