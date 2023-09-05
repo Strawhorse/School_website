@@ -40,7 +40,8 @@
         <div class="row">
             <div class="about-col" style="background-color: lightblue; text-align: center;">
                 <h1>Enter New Student</h1>
-                <form action="">
+                <form action="enter_student.php" method="post" class="enter_student">
+                    <!-- using the enter_student.php file here to enter and register new student, should also return the student number as well -->
                     <input type="text" name="student_first_name" placeholder="Enter First Name" required><br>
                     <input type="text" name="student_last_name" placeholder="Enter Last Name" required><br>
                     <input type="number" name="age" placeholder="Student Age" required><br>
