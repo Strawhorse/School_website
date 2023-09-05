@@ -74,7 +74,7 @@
                 <td><?php echo $data['person_name']??''; ?></td>
                 <td><?php echo $data['email']??''; ?></td>
                 <td><?php echo $data['telephone']??''; ?></td>
-                <td><?php echo $data['contact_message']??''; ?></td>
+                <td><?php echo $data['query']??''; ?></td>
                 <td></td>
                 <td>⬜</td>
             </tr>

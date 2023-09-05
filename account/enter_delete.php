@@ -38,24 +38,25 @@
         <!-- content for about us section -->
         <section class="about-us">
         <div class="row">
-            <div class="about-col">
+            <div class="about-col" style="background-color: lightblue; text-align: center;">
                 <h1>Enter New Student</h1>
                 <form action="">
-                    <input type="text" name="person_name" placeholder="Enter Name" required><br>
-                    <input type="email" name="email" placeholder="Email Address" required><br>
-                    <input type="number" name="telephone" placeholder="Telephone Number"><br>
+                    <input type="text" name="student_first_name" placeholder="Enter First Name" required><br>
+                    <input type="text" name="student_last_name" placeholder="Enter Last Name" required><br>
+                    <input type="number" name="age" placeholder="Student Age" required><br>
+                    <input type="text" name="sex" placeholder="Student Sex: boy/girl"><br>
                     <button type="" class="hero-btn red-btn">ENTER STUDENT</button>
                 </form>
-
-                <!-- add in JS verification/bot check here -->
-
             </div>
             
-            <div class="about-col">
+            <!-- JS script to check before inputting -->
+            
+            <!-- student can be deleted by name or by the student number which is created when they are entered -->
+            <div class="about-col" style="background-color: yellow; text-align: center;">
                 <h1>Delete Students</h1>
-                    <input type="text" name="person_name" placeholder="Enter Name" required><br>
-                    <input type="email" name="email" placeholder="Email Address" required><br>
-                    <input type="number" name="telephone" placeholder="Telephone Number"><br>
+                    <input type="text" name="student_first_name" placeholder="Enter First Name"><br>
+                    <input type="text" name="student_last_name" placeholder="Enter Last Name" ><br>
+                    <input type="number" name="student_number" placeholder="Student Number"><br>
                     <button type="" class="hero-btn red-btn">DELETE STUDENT</button>
 
             </div>
