@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -28,16 +29,38 @@
             </div>
             <i class="fa-solid fa-bars" onclick="showMenu()"></i>
         </nav>        
-        <h1>Grades</h1>
+        <h1>Enter & Delete Students</h1>
     </section>
 
 
-    <!-- Login and sign up sheets -->
-    <section class="socials">
-        
 
-       
-    </section>
+
+        <!-- content for about us section -->
+        <section class="about-us">
+        <div class="row">
+            <div class="about-col">
+                <h1>Enter New Student</h1>
+                <form action="">
+                    <input type="text" name="person_name" placeholder="Enter Name" required><br>
+                    <input type="email" name="email" placeholder="Email Address" required><br>
+                    <input type="number" name="telephone" placeholder="Telephone Number"><br>
+                    <button type="" class="hero-btn red-btn">ENTER STUDENT</button>
+                </form>
+
+                <!-- add in JS verification/bot check here -->
+
+            </div>
+            
+            <div class="about-col">
+                <h1>Delete Students</h1>
+                    <input type="text" name="person_name" placeholder="Enter Name" required><br>
+                    <input type="email" name="email" placeholder="Email Address" required><br>
+                    <input type="number" name="telephone" placeholder="Telephone Number"><br>
+                    <button type="" class="hero-btn red-btn">DELETE STUDENT</button>
+
+            </div>
+        </div>
+        </section>
 
 
 

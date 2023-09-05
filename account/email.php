@@ -19,7 +19,7 @@
             <div class="nav-links" id="navLinks">
                 <i class="fa-solid fa-rectangle-xmark" onclick="hideMenu()"></i>
                 <ul>
-                    <li><a href="." style="color: #c7190d; font-weight: 600;">ENTER/DELETE STUDENT</a></li>
+                    <li><a href="enter_delete.php" style="color: #c7190d; font-weight: 600;">ENTER/DELETE STUDENT</a></li>
                     <li><a href="grades.php" style="color: #c7190d; font-weight: 600;">GRADES</a></li>
                     <li><a href="queries.php" style="color: #c7190d; font-weight: 600;">QUERIES</a></li>
                     <li><a href="email.php" style="color: #c7190d; font-weight: 600;">EMAIL</a></li>
@@ -28,7 +28,7 @@
             </div>
             <i class="fa-solid fa-bars" onclick="showMenu()"></i>
         </nav>        
-        <h1>Teacher Access</h1>
+        <h1>Teacher Email Access</h1>
     </section>
 
 
