@@ -39,7 +39,7 @@
         <section class="about-us">
         <div class="row">
             <div class="about-col" style="background-color: lightblue; text-align: center;">
-                <h1>Enter New Student</h1>
+                <h1>Enter New Student</h1><br>
                 <form action="enter_student.php" method="post" class="enter_student">
                     <!-- using the enter_student.php file here to enter and register new student, should also return the student number as well -->
                     <input type="text" name="student_first_name" placeholder="Enter First Name" required><br>
@@ -54,12 +54,14 @@
             
             <!-- student can be deleted by name or by the student number which is created when they are entered -->
             <div class="about-col" style="background-color: yellow; text-align: center;">
-                <h1>Delete Students</h1>
+                <h1>Delete Students</h1><br>
+                <form action="delete_student.php" method="post" class="delete_student">
+                    <!-- using the delete_student.php file here to remove student -->
                     <input type="text" name="student_first_name" placeholder="Enter First Name"><br>
                     <input type="text" name="student_last_name" placeholder="Enter Last Name" ><br>
                     <input type="number" name="student_number" placeholder="Student Number"><br>
                     <button type="" class="hero-btn red-btn">DELETE STUDENT</button>
-
+                </form>
             </div>
         </div>
         </section>
