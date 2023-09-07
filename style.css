@@ -432,6 +432,8 @@ h3{
     margin-right: auto;
     border: 1px solid #ccc;
     padding: 10px 20px;
+    padding-top: 80px;
+    padding-bottom: 50px;
 }
 
 .comment-box select{
