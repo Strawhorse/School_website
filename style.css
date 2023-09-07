@@ -370,7 +370,9 @@ h3{
 
 .about-col {
     flex-basis: 48%;
-    padding: 30px 2px;
+    padding-top: 10px;
+    padding-right: 2px;
+    padding-left: 2px;
 }
 
 .about-col img{
@@ -488,3 +490,5 @@ h3{
 tr:nth-child(even) {
     background-color: #D6EEEE;
   }
+
+
