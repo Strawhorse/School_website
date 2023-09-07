@@ -57,6 +57,8 @@
                 <h1>Delete Students</h1><br>
                 <form action="delete_student.php" method="post" class="delete_student">
                     <!-- using the delete_student.php file here to remove student -->
+                    <!-- Fields used to delete student will be optional between either the names or the student number -->
+                    <!-- perhaps include an 'Are you sure' section -->
                     <input type="text" name="student_first_name" placeholder="Enter First Name"><br>
                     <input type="text" name="student_last_name" placeholder="Enter Last Name" ><br>
                     <input type="number" name="student_number" placeholder="Student Number"><br>
