@@ -396,8 +396,15 @@ h3{
     border: 1px solid #f44336;
     background: transparent;
     columns: #f44336;
-
 }
+
+.blue-btn{
+    color: black;
+    border: 1px solid #206cc3;
+    background: transparent;
+    columns: #206cc3;
+}
+
 
 
 /* about page styling */

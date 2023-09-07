@@ -45,8 +45,8 @@
                     <input type="text" name="student_first_name" placeholder="Enter First Name" required><br>
                     <input type="text" name="student_last_name" placeholder="Enter Last Name" required><br>
                     <input type="number" name="age" placeholder="Student Age" required><br>
-                    <input type="text" name="sex" placeholder="Student Sex: boy/girl"><br>
-                    <button type="" class="hero-btn red-btn">ENTER STUDENT</button>
+                    <input type="text" name="sex" placeholder="Student Sex: boy/girl" required><br>
+                    <button type="" class="hero-btn blue-btn">ENTER STUDENT</button>
                 </form>
             </div>
             
@@ -60,7 +60,7 @@
                     <input type="text" name="student_first_name" placeholder="Enter First Name"><br>
                     <input type="text" name="student_last_name" placeholder="Enter Last Name" ><br>
                     <input type="number" name="student_number" placeholder="Student Number"><br>
-                    <button type="" class="hero-btn red-btn">DELETE STUDENT</button>
+                    <button type="" class="hero-btn blue-btn">DELETE STUDENT</button>
                 </form>
             </div>
         </div>
