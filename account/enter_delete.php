@@ -81,7 +81,10 @@
     </section>
     
 
+        <!-- move to top button -->
+    <button class="back-to-top" onclick="topFunction()">Back To Top</button>
 
-    <script src="script.js"></script>
+
+    <script src="../script.js"></script>
 </body>
 </html>
