@@ -42,7 +42,8 @@ Stages of completion:
 10. Password hashing - Done
 11. Autoloading classes check - 
 12. Pagination and splitting database results up:
-13. Grade adder and deleter: 
+13. student adder and deleter: Adder done with database created +
+14. 
 
 
 Other web sources used: 
