@@ -34,39 +34,42 @@
 
 
 
-
-        <!-- content for about us section -->
-        <section class="about-us">
-        <div class="row">
-            <div class="about-col" style="background-color: lightblue; text-align: center;">
-                <h1>Enter New Student</h1><br>
-                <form action="enter_student.php" method="post" class="enter_student">
-                    <!-- using the enter_student.php file here to enter and register new student, should also return the student number as well -->
-                    <input type="text" name="student_first_name" placeholder="Enter First Name" required><br>
-                    <input type="text" name="student_last_name" placeholder="Enter Last Name" required><br>
-                    <input type="number" name="age" placeholder="Student Age" required><br>
-                    <input type="text" name="sex" placeholder="Student Sex: boy/girl" required><br>
-                    <button type="" class="hero-btn blue-btn">ENTER STUDENT</button>
-                </form>
-            </div>
-            
-            <!-- JS script to check before inputting -->
-            
-            <!-- student can be deleted by name or by the student number which is created when they are entered -->
-            <div class="about-col" style="background-color: yellow; text-align: center;">
-                <h1>Delete Students</h1><br>
-                <form action="delete_student.php" method="post" class="delete_student">
-                    <!-- using the delete_student.php file here to remove student -->
-                    <!-- Fields used to delete student will be optional between either the names or the student number -->
-                    <!-- perhaps include an 'Are you sure' section -->
-                    <input type="text" name="student_first_name" placeholder="Enter First Name"><br>
-                    <input type="text" name="student_last_name" placeholder="Enter Last Name" ><br>
-                    <input type="number" name="student_number" placeholder="Student Number"><br>
-                    <button type="" class="hero-btn blue-btn">DELETE STUDENT</button>
-                </form>
-            </div>
+    <!-- section for inserting new students in database -->
+    <section class="about-us">
+    <div class="row">
+        <div class="about-col" style="background-color: lightblue; text-align: center;">
+            <h1>Enter New Student</h1><br>
+            <form action="enter_student.php" method="post" class="comment-form">
+                <!-- using the enter_student.php file here to enter and register new student, should also return the student number as well -->
+                <input type="text" name="student_first_name" placeholder="Enter First Name" required><br>
+                <input type="text" name="student_last_name" placeholder="Enter Last Name" required><br>
+                <input type="number" name="age" placeholder="Student Age" required><br>
+                <input type="text" name="sex" placeholder="Student Sex: boy/girl" required><br>
+                <button type="" class="hero-btn blue-btn">ENTER STUDENT</button>
+            </form>
         </div>
-        </section>
+        
+        <!-- JS script to check before inputting -->
+        
+        <!-- student can be deleted by name or by the student number which is created when they are entered -->
+        <div class="about-col" style="background-color: yellow; text-align: center;">
+            <h1>Delete Students</h1><br>
+            <form action="delete_student.php" method="post" class="comment-form">
+                <!-- using the delete_student.php file here to remove student -->
+                <!-- Fields used to delete student will be optional between either the names or the student number -->
+                <!-- perhaps include an 'Are you sure' section -->
+                <input type="text" name="student_first_name" placeholder="Enter First Name"><br>
+                <input type="text" name="student_last_name" placeholder="Enter Last Name" ><br>
+                <input type="number" name="student_number" placeholder="Student Number"><br>
+                
+                <input type="checkbox" name="checkbox_delete" value="Yes" /></br>
+                <label for="checkbox_delete"> Tick to confirm delete</label><br>
+
+                <button type="" class="hero-btn blue-btn">DELETE STUDENT</button>
+            </form>
+        </div>
+    </div>
+    </section>
 
 
 
