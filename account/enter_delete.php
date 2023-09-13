@@ -60,7 +60,7 @@
                 <!-- perhaps include an 'Are you sure' section -->
                 <input type="text" name="student_first_name" placeholder="Enter First Name"><br>
                 <input type="text" name="student_last_name" placeholder="Enter Last Name" ><br>
-                <input type="number" name="student_number" placeholder="Student Number"><br>
+                <input type="number" name="student_id" placeholder="Student ID"><br>
                 
                 <input type="checkbox" name="checkbox_delete" value="Yes" /></br>
                 <label for="checkbox_delete"> Tick to confirm delete</label><br>
