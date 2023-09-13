@@ -48,6 +48,8 @@
                 <button type="" class="hero-btn blue-btn">ENTER STUDENT</button>
             </form>
         </div>
+
+
         
         <!-- JS script to check before inputting -->
         
@@ -62,7 +64,7 @@
                 <input type="text" name="student_last_name" placeholder="Enter Last Name" ><br>
                 <input type="number" name="student_id" placeholder="Student ID"><br>
                 
-                <input type="checkbox" name="checkbox_delete" value="Yes" /></br>
+                <input type="checkbox" name="checkbox_delete" value="" required/></br>
                 <label for="checkbox_delete"> Tick to confirm delete</label><br>
 
                 <button type="" class="hero-btn blue-btn">DELETE STUDENT</button>
