@@ -36,6 +36,8 @@
     <section class="socials">
         
 
+        <!-- create new database and create join between student list and grade list -->
+
        
     </section>
 
