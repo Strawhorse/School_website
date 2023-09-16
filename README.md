@@ -45,6 +45,8 @@ Stages of completion:
 13. student adder and deleter: Adder done with database created +
 14. student updater - check how to use js to do this with php - 
 15. 
+16. move students between classes/teachers, will need joins and foreign keys - 
+17. 
 
 
 Other web sources used: 
