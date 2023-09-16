@@ -43,7 +43,8 @@ Stages of completion:
 11. Autoloading classes check - 
 12. Pagination and splitting database results up:
 13. student adder and deleter: Adder done with database created +
-14. 
+14. student updater - check how to use js to do this with php - 
+15. 
 
 
 Other web sources used: 
