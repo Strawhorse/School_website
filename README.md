@@ -47,6 +47,9 @@ Stages of completion:
 15. 
 16. move students between classes/teachers, will need joins and foreign keys - 
 17. 
+18. have user logins bit no teachers; need a table of teachers or teacher logins - 
+19. 
+
 
 
 Other web sources used: 
