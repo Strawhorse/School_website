@@ -495,7 +495,3 @@ h3{
     text-align: center;
     color: #fff;
 }
-
-tr:nth-child(even) {
-    background-color: #D6EEEE;
-  }

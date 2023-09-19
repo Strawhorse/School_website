@@ -1,4 +1,14 @@
+<?php
 
+    require_once dirname(__DIR__) . '/classes/Database.php';
+    require_once dirname(__DIR__) . '/classes/Auth.php';
+    require_once dirname(__DIR__) . '/classes/Query.php';
+
+    session_start();
+
+    Auth::requireLogin();
+
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -45,7 +55,7 @@
                 <input type="text" name="student_last_name" placeholder="Enter Last Name" required><br>
                 <input type="number" name="age" placeholder="Student Age" required><br>
                 <input type="text" name="sex" placeholder="Student Sex: Boy/Girl" required><br>
-                <button type="" class="hero-btn blue-btn">ENTER STUDENT</button>
+                <button type="" class="hero-btn blue-btn">ADD NEW STUDENT</button>
             </form>
         </div>
 

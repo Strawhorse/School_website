@@ -1,3 +1,15 @@
+<?php
+
+    require_once dirname(__DIR__) . '/classes/Database.php';
+    require_once dirname(__DIR__) . '/classes/Auth.php';
+    require_once dirname(__DIR__) . '/classes/Query.php';
+
+    session_start();
+
+    Auth::requireLogin();
+
+?>
+
 
 <!DOCTYPE html>
 <html lang="en">

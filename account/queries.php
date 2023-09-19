@@ -43,61 +43,67 @@
     </section>
 
 
-    <div>
-        <br>
-        <table style="background: #e6ffff; border:1px solid black; margin-left:auto; margin-right:auto; width: 60%; text-align: center;border-spacing: 0 15px; ">
-            <thead>
-                    <th>Query no.</th>
-                    <th>Name</th>
-                    <th>Email</th>
-                    <th>Telephone</th>
-                    <th>Details</th>
-                    <th>Link to Query</th>
-                    <th>Answered</th>
-            </thead>
-            
-            <tbody>
-            <?php
-            // set database connection to feed queries into table
-            $db = new Database();
-            $conn = $db->getConn();
 
-            $fetchData = Query::getAll($conn);
+    <section style="padding-top: 80px;">
+        <div>
+            <br>
+            <table style="background: #e6ffff; border:1px solid black; margin-left:auto; margin-right:auto; width: 60%; text-align: center;border-spacing: 0 15px; ">
+                <thead>
+                        <th>Query no.</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Telephone</th>
+                        <th>Details</th>
+                        <th>Link to Query</th>
+                        <th>Answered</th>
+                </thead>
+                
+                <tbody>
+                <?php
+                // set database connection to feed queries into table
+                $db = new Database();
+                $conn = $db->getConn();
 
-            if(is_array($fetchData)) {
-                foreach($fetchData as $data) {
+                $fetchData = Query::getAllQueries($conn);
 
-            ?>
+                if(is_array($fetchData)) {
+                    foreach($fetchData as $data) {
 
-            <tr style="border-bottom: 1px solid #ddd;">
-                <td><?php echo $data['id']??''; ?></td>
-                <td><?php echo $data['person_name']??''; ?></td>
-                <td><?php echo $data['email']??''; ?></td>
-                <td><?php echo $data['telephone']??''; ?></td>
-                <td><?php echo $data['contact_message']??''; ?></td>
-                <td></td>
-                <td>⬜</td>
-            </tr>
-            <?php }} 
-                else{ ?>}
-            <tr>
-                <td colspan="6">
+                ?>
 
-            <?php echo $fetchData; ?>
-                </td>
-            </tr>
+                <tr style="border-bottom: 1px solid #ddd;">
+                    <td><?php echo $data['id']??''; ?></td>
+                    <td><?php echo $data['person_name']??''; ?></td>
+                    <td><?php echo $data['email']??''; ?></td>
+                    <td><?php echo $data['telephone']??''; ?></td>
+                    <td><?php echo $data['contact_message']??''; ?></td>
+                    <td></td>
+                    <td>⬜</td>
+                </tr>
+                <?php }} 
+                    else{ ?>}
+                <tr>
+                    <td colspan="6">
 
-            <?php }?>
+                <?php echo $fetchData; ?>
+                    </td>
+                </tr>
 
-            </tbody>
+                <?php }?>
 
-        </table>
-    </div>
+                </tbody>
+
+            </table>
+        </div>
+    </section>
 
 
 
   
 
+
+    <!-- move to top button -->
+    <button class="back-to-top" onclick="topFunction()">Back To Top</button>
     <!-- socials -->
     <section class="socials">
         <p>Made by John Bracken, based on design from Easy Tutorials</p>
@@ -105,6 +111,6 @@
     
 
 
-    <script src="script.js"></script>
+    <script src="../script.js"></script>
 </body>
 </html>

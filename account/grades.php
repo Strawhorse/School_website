@@ -1,3 +1,15 @@
+<?php
+
+    require_once dirname(__DIR__) . '/classes/Database.php';
+    require_once dirname(__DIR__) . '/classes/Auth.php';
+    require_once dirname(__DIR__) . '/classes/Query.php';
+
+    session_start();
+
+    Auth::requireLogin();
+
+?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -32,18 +44,74 @@
     </section>
 
 
-    <!-- Login and sign up sheets -->
-    <section class="socials">
-        
 
-        <!-- create new database and create join between student list and grade list -->
+    <div style="padding-top: 80px;">
+        <br>
+        <table style="background: #bdb76b; border:1px solid black; margin-left:auto; margin-right:auto; width: 60%; text-align: center;border-spacing: 0 15px;">
+            <thead>
+                    <th>ID number</th>
+                    <th>Student Name</th>
+                    <th>English Grade</th>
+                    <th>Maths Grade</th>
+                    <th>Irish Grade</th>
+            </thead>
+            
+            <tbody>
+            <?php
+            // set database connection to feed queries into table
+            $db = new Database();
+            $conn = $db->getConn();
 
-       
+            $fetchData = Query::getAllGrades($conn);
+
+            if(is_array($fetchData)) {
+                foreach($fetchData as $data) {
+
+            ?>
+
+            <tr style="border-bottom: 1px solid black">
+                <td><?php echo $data['id']??''; ?></td>
+                <td><?php echo $data['student_full_name']??''; ?></td>
+                <td><?php echo $data['english']??''; ?></td>
+                <td><?php echo $data['maths']??''; ?></td>
+                <td><?php echo $data['irish']??''; ?></td>
+                <td></td>
+            </tr>
+            <?php }} 
+                else{ ?>}
+            <tr>
+                <td colspan="6">
+
+            <?php echo $fetchData; ?>
+                </td>
+            </tr>
+
+            <?php }?>
+
+            </tbody>
+
+        </table>
+    </div>
+
+        <!-- section for inserting new students in database -->
+    <section class="about-us">
+            <div class="" style="background-color: #8fbc8f; text-align: center; width: 60%; margin-left: auto; margin-right: auto;">
+                <h1>Edit Student Grades</h1><br>
+                <form action="edit_grade.php" method="post" class="comment-form">
+                    <!-- using the enter_student.php file here to enter and register new student, should also return the student number as well -->
+                    <input type="number" name="student_id" placeholder="Enter Student ID number from list above" required><br>
+                    <input type="text" name="english_grade" placeholder="Enter New English Grade" required><br>
+                    <input type="text" name="english_grade" placeholder="Enter New English Grade" required><br>
+                    <input type="text" name="english_grade" placeholder="Enter New English Grade" required><br>
+                    <button type="" class="hero-btn blue-btn">UPDATE STUDENT GRADES</button>
+                </form>
+            </div>
     </section>
 
-
-
   
+
+    <!-- move to top button -->
+    <button class="back-to-top" onclick="topFunction()">Back To Top</button>
 
     <!-- socials -->
     <section class="socials">
@@ -52,6 +120,7 @@
     
 
 
-    <script src="script.js"></script>
+    <script src="../script.js"></script>
 </body>
 </html>
+
