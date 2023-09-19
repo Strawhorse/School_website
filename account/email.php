@@ -44,23 +44,22 @@
     </section>
 
 
-
-
     <section class="about-us">
-            <div class="row">
-                <div class="about-col">
-                    <h1 style="text-align:center;">Send email reply to query</h1>
-                </div>
-                
-                <div class="about-col">
-                    <h1 style="text-align:center;">Send email reply to query</h1>
-                </div>
+            <div class="" style="background-color: #708090; text-align: center; width: 60%; margin-left: auto; margin-right: auto;">
+                <h1>Send Email Reply</h1><br>
+                    <form action="edit-grades.php" method="POST" class="comment-form">
+                        <!-- using the enter_student.php file here to enter and register new student, should also return the student number as well -->
+                        <input type="email" id="email" type="email" placeholder="Your Email Address">
+                        <input type="subject" id="subject" placeholder="Subject">
+                        <input type="message" id="message" placeholder="Message">
+                        <button type="" class="hero-btn blue-btn">SEND EMAIL</button>
+                    </form>
             </div>
-        </section>
+    </section>
 
 
 
-  
+      
 
     <!-- socials -->
     <section class="socials">
