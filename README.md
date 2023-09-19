@@ -42,13 +42,15 @@ Stages of completion:
 10. Password hashing - Done
 11. Autoloading classes check - 
 12. Pagination and splitting database results up:
-13. student adder and deleter: Adder done with database created +
-14. student updater - check how to use js to do this with php - 
+13. student adder and deleter: Done
+14. student updater - Done (but needs work on php file to only update numbers that are entered on form and ignore others)
 15. 
 16. move students between classes/teachers, will need joins and foreign keys - 
 17. 
 18. have user logins bit no teachers; need a table of teachers or teacher logins - 
-19. 
+19. Set up email form - Done
+20. Enable email function and link to queries -
+21. 
 
 
 
