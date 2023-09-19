@@ -51,7 +51,7 @@
                         <!-- using the enter_student.php file here to enter and register new student, should also return the student number as well -->
                         <input type="email" id="email" type="email" placeholder="Your Email Address">
                         <input type="subject" id="subject" placeholder="Subject">
-                        <input type="message" id="message" placeholder="Message">
+                        <textarea name="message" id="message" placeholder="Message"></textarea>
                         <button type="" class="hero-btn blue-btn">SEND EMAIL</button>
                     </form>
             </div>
