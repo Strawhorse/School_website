@@ -18,7 +18,10 @@ class Query{
 
         $results = $conn->query($sql);
 
-        return $results->fetchAll(PDO::FETCH_ASSOC);
+        $results->setFetchMode(PDO::FETCH_CLASS, 'Query');
+
+
+        return $results->fetchAll();
     }
 
 

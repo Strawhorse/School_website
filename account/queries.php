@@ -72,11 +72,11 @@
                 ?>
 
                 <tr style="border-bottom: 1px solid #ddd;">
-                    <td><?php echo $data['id']??''; ?></td>
-                    <td><?php echo $data['person_name']??''; ?></td>
-                    <td><?php echo $data['email']??''; ?></td>
-                    <td><?php echo $data['telephone']??''; ?></td>
-                    <td><?php echo $data['contact_message']??''; ?></td>
+                    <td><?php echo $data->id??''; ?></td>
+                    <td><?php echo $data->person_name??''; ?></td>
+                    <td><?php echo $data->email??''; ?></td>
+                    <td><?php echo $data->telephone??''; ?></td>
+                    <td><?php echo $data->contact_message??''; ?></td>
                     <td></td>
                     <td>⬜</td>
                 </tr>
