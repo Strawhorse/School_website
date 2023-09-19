@@ -97,12 +97,12 @@
     <section class="about-us">
             <div class="" style="background-color: #8fbc8f; text-align: center; width: 60%; margin-left: auto; margin-right: auto;">
                 <h1>Edit Student Grades</h1><br>
-                <form action="edit_grade.php" method="post" class="comment-form">
+                <form action="edit-grades.php" method="post" class="comment-form">
                     <!-- using the enter_student.php file here to enter and register new student, should also return the student number as well -->
                     <input type="number" name="student_id" placeholder="Enter Student ID number from list above" required><br>
                     <input type="text" name="english_grade" placeholder="Enter New English Grade" required><br>
-                    <input type="text" name="english_grade" placeholder="Enter New English Grade" required><br>
-                    <input type="text" name="english_grade" placeholder="Enter New English Grade" required><br>
+                    <input type="text" name="maths_grade" placeholder="Enter New Maths Grade" required><br>
+                    <input type="text" name="irish_grade" placeholder="Enter New Irish Grade" required><br>
                     <button type="" class="hero-btn blue-btn">UPDATE STUDENT GRADES</button>
                 </form>
             </div>
