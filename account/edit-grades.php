@@ -23,11 +23,17 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $query = $conn -> prepare('UPDATE grades SET english=:english, maths=:maths, irish=:irish WHERE id=:id');
 
+    
+    $query->bindParam(':id', $id, PDO::PARAM_INT);
+
+
+    // need to find out a method to change only the grades which have been entered
+
+
     $query->bindParam(':english', $english, PDO::PARAM_INT);
     $query->bindParam(':maths', $maths, PDO::PARAM_INT);
     $query->bindParam(':irish', $irish, PDO::PARAM_INT);
-    $query->bindParam(':id', $id, PDO::PARAM_INT);
-
+    
 
     if($query->execute()) {
 
