@@ -44,12 +44,19 @@
     </section>
 
 
-    <!-- Login and sign up sheets -->
-    <section class="socials">
-        
 
-       
-    </section>
+
+    <section class="about-us">
+            <div class="row">
+                <div class="about-col">
+                    <h1 style="text-align:center;">Send email reply to query</h1>
+                </div>
+                
+                <div class="about-col">
+                    <h1 style="text-align:center;">Send email reply to query</h1>
+                </div>
+            </div>
+        </section>
 
 
 
