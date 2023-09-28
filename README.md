@@ -44,9 +44,11 @@ Stages of completion:
 12. Pagination and splitting database results up:
 13. student adder and deleter: Done
 14. student updater - Done (but needs work on php file to only update numbers that are entered on form and ignore others)
+15. Create a new login page for students where they can then log in and post blog posts
+
 15. 
-16. move students between classes/teachers, will need joins and foreign keys - 
-17. 
+16.  
+17. move students between classes/teachers, will need joins and foreign keys -
 18. have user logins bit no teachers; need a table of teachers or teacher logins - 
 19. Set up email form - Done
 20. Enable email function and link to queries -
