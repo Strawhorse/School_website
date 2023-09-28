@@ -14,7 +14,7 @@ class User {
     // authenticate user
     public static function authenticate($conn, $email, $password) {
         
-        $sql = "SELECT * FROM user WHERE email = :email";
+        $sql = "SELECT * FROM users WHERE email = :email";
         
         
         $stmt = $conn->prepare($sql);
